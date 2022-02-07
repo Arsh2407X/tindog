@@ -1,0 +1,200 @@
+/* MEDIA QUERY BREAKPOINTS:-
+media queries are complete css and are not part of any framework.
+Media query is written in css file as @media <type> <feature>{} and when these types and features are true then the css code inside this
+bracket will get executed.
+These are used to make websites responsive so that website will get different styling if it is searched on a mobile or a desktop
+we can use "and" and "or" operators in the type of the media query to narrow down the required condition for display
+
+"Viewport" is the size of the screen on which website is displayed
+"Browser" is the size of the sliding window which contains the browser or search engine */
+
+
+/* COMBINING SELECTORS:-
+There are multiple ways to combine selectors some of these ways are:
+(1) selector1, selector2{rest of the css}
+--> The other way is heirarchical selectors and these are used as:
+(1) selector1 selector2{rest of the css} = the browser will read this code from right to left and the selector2 is read first
+so all the elements which are contaioned within selector1(parent) with the type selector2(child) will get styled this way
+--> another way of combining selectors is combining selectors, the way to do this is:
+(1) selector1.selector2{rest of css} [. for class and # for id and etc] = this type of combination is done for the elements which
+are on the same heirarchical level and the 2 selectors cannot be parent and child and these 2 selectors have to be wtihin the
+same html element */
+
+
+/* SELECTOR PRIORITY:-
+The priority for the browser to display the website is
+id's > classes > html elements */
+
+
+body{
+  font-family: "Montserrat";
+}
+
+#title{
+  background-color: #ff4c68
+
+}
+
+h1{
+  font-family: "Montserrat-Black";
+  font-size: 3rem;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.container-fluid{
+  padding: 3% 15% 7%;
+}
+
+/* navigation bar */
+
+.navbar{
+  padding: 0 0 4.5rem 0;
+}
+
+.navbar-brand{
+  font-family: "Ubuntu";
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.nav-item{
+  padding: 0 18px 0 18px;
+}
+
+.nav-link{
+  font-family: "Montserrat-Light";
+  font-size: 1.2rem;
+}
+
+/* downlaod buttons */
+
+.download-button{
+  margin: 5% 3% 5% 0%;
+}
+
+/*title image */
+
+.image-container{
+  /* text-align: center; */
+}
+
+/* Z-INDEX
+for z-index to work correctly the position of the element or container must not be static or default */
+
+.title-image{
+  width: 15%;
+  position: absolute;
+  right: 20%;
+  transform: rotate(25deg);
+}
+
+/* fetaures section*/
+
+#features{
+  padding: 1%;
+  position: relative;
+  z-index: 1;
+  background: #fff;
+}
+
+.feature-box{
+  padding: 5%;
+  text-align: center;
+}
+
+.feature-icon{
+  color: #ef8172;
+  margin-bottom: 1rem;
+}
+
+.feature-icon:hover{
+  color: #ff4c68;
+}
+
+/* testimonial section */
+
+.carousel-item{
+  padding: 10%;
+}
+
+#testimonials{
+  text-align: center;
+  background-color: #ef8172;
+   color: #fff;
+}
+
+h2{
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.testimonial-image{
+  border-radius: 100%;
+  width: 10%;
+  margin: 20px;
+}
+
+/* press*/
+
+#press{
+  background-color: #ef8172;
+  text-align: center;
+  padding-bottom: 3%;
+}
+
+.press-logo{
+  width: 15%;
+  margin: 20px 20px 50px 20px;
+}
+
+/*pricing section*/
+
+#pricing{
+  padding: 100px;
+  text-align: center;
+}
+
+.pricing-column{
+  padding: 3% 2%;
+}
+
+/* footer */
+
+#cta{
+  background-color: #ef8172;
+  text-align: center;
+  padding: 50px;
+  color: #fff;
+  padding: 7% 15%;
+}
+
+.cta-heading{
+  font-family: "Montserrat-Black";
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+#footer{
+  text-align: center;
+  padding: 7% 15%;
+}
+
+.social-icon{
+  margin: 20px 10px;
+}
+
+/* media query */
+
+
+@media (max-width: 1028px){
+  #title{
+    text-align: center;
+  }
+  .title-image{
+    /* position is made static to bring back the image in the flow of html */
+    position: static;
+    transform: rotate(0);
+    width: 100%;
+  }
+}
